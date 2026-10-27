@@ -36,9 +36,10 @@ export class ZeroTrustMasker {
   public static maskText(input: string, customMask?: string): string {
     if (!input || typeof input !== 'string') return input;
     let scrubbed = input;
-    const replacement = customMask || this.DEFAULT_MASK;
     for (const rule of this.REGEX_RULES) {
-      scrubbed = scrubbed.replace(rule.pattern, rule.mask.includes('$') ? rule.mask : replacement);
+      // Use the specific rule.mask unless a custom global override is explicitly passed
+      const replacement = customMask || rule.mask;
+      scrubbed = scrubbed.replace(rule.pattern, replacement);
     }
     return scrubbed;
   }
