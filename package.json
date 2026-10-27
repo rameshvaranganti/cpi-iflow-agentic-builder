@@ -1,10 +1,10 @@
 {
-  "name": "@agenticintegrationhub/cpi-iflow-builder-mcp",
+  "name": "cpi-iflow-agentic-builder",
   "version": "1.0.0",
   "description": "Autonomous SAP Cloud Integration (CPI) iFlow designer, Zero-Trust sanitizer, and MCP generator",
   "main": "dist/index.js",
   "bin": {
-    "cpi-iflow-builder": "./dist/index.js"
+    "cpi-iflow-agentic-builder": "./dist/index.js"
   },
   "files": [
     "dist",
@@ -14,11 +14,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:coverage": "jest --coverage --coverageThreshold=\"{\\\"global\\\":{\\\"branches\\\":80,\\\"functions\\\":85,\\\"lines\\\":85,\\\"statements\\\":85}}\"",
     "prepare": "npm run build"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "keywords": [
     "sap",
@@ -28,16 +24,13 @@
     "iflow",
     "mcp",
     "zero-trust",
-    "model-context-protocol"
+    "cursor-rules"
   ],
   "author": "Rameshkumar Varanganti (https://agenticintegrationhub.com/)",
   "homepage": "https://agenticintegrationhub.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/rameshvaranganti/cpi-iflow-agentic-builder.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rameshvaranganti/cpi-iflow-agentic-builder/issues"
   },
   "license": "Apache-2.0",
   "dependencies": {

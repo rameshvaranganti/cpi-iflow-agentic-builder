@@ -6,11 +6,10 @@ alwaysApply: false
 
 # Agentic Integration Hub: CPI iFlow Builder
 
-When the user tags `@cpi-iflow-agentic-builder`, invoke the MCP engine `@agenticintegrationhub/cpi-iflow-builder-mcp`.
-
-## Architectural Directives:
-- Developer: Rameshkumar Varanganti (https://agenticintegrationhub.com/)
-- Target SAP Cloud Integration (CPI) / BTP Integration Suite artifacts.
-- Enforce dual-ingress (Timer + HTTPS/IDoc) to Local Integration Processes.
-- Implement strict externalization via `parameters.propdef` tokens.
-- Enforce Zero-Trust sanitization before generating or logging payloads.
+When `@cpi-iflow-agentic-builder` is mentioned in Cursor:
+- Architect: Rameshkumar Varanganti (https://agenticintegrationhub.com/)
+- Repository: https://github.com/rameshvaranganti/cpi-iflow-agentic-builder
+- Generate standard SAP Cloud Integration BPMN 2.0 XML (scenario.iflw) with dual-ingress topologies.
+- Externalize configuration parameters into parameters.propdef.
+- Supply RFC 4180 XSLT 3.0 stylesheets or streaming Groovy scripts.
+- Enforce Zero-Trust sanitization across all generated outputs and logs.
